@@ -56,12 +56,16 @@ const {
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const skipLink = document.getElementById('skip-to-content');
-        skipLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          const mainContent = document.querySelector('main');
-          mainContent.setAttribute('tabindex', '-1');
-          mainContent.focus();
-        });
+        if (skipLink) {
+          skipLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const mainContent = document.querySelector('main');
+            if (mainContent) {
+              mainContent.setAttribute('tabindex', '-1');
+              mainContent.focus();
+            }
+          });
+        }
       });
     </script>
     
@@ -200,21 +204,29 @@ const {
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
-        menuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-          menuButton.setAttribute('aria-expanded', 
-            menuButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-          );
-        });
+        if (menuButton) {
+          menuButton.addEventListener('click', function() {
+            if (mobileMenu) {
+              mobileMenu.classList.toggle('hidden');
+            }
+            menuButton.setAttribute('aria-expanded', 
+              menuButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            );
+          });
+        }
         
         // Close menu when clicking menu items
-        const menuItems = mobileMenu.querySelectorAll('a');
-        menuItems.forEach(item => {
-          item.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
-            menuButton.setAttribute('aria-expanded', 'false');
+        if (mobileMenu) {
+          const menuItems = mobileMenu.querySelectorAll('a');
+          menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+              mobileMenu.classList.add('hidden');
+              if (menuButton) {
+                menuButton.setAttribute('aria-expanded', 'false');
+              }
+            });
           });
-        });
+        }
       });
     </script>
   </body>
