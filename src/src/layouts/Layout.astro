@@ -204,14 +204,28 @@ const {
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
-        if (menuButton) {
-          menuButton.addEventListener('click', function() {
-            if (mobileMenu) {
-              mobileMenu.classList.toggle('hidden');
-            }
+        if (menuButton && mobileMenu) {
+          // Toggle menu
+          menuButton.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent click from immediately bubbling to document
+            mobileMenu.classList.toggle('hidden');
             menuButton.setAttribute('aria-expanded', 
               menuButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
             );
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(e) {
+            const target = e.target as Node;
+            if (!mobileMenu.contains(target) && !menuButton.contains(target) && !mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+              menuButton.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Prevent clicks inside menu from closing it
+          mobileMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
           });
         }
         
