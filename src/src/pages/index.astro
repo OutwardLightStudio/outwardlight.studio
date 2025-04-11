@@ -1,373 +1,516 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="OutwardLight Studio | Open Source Development">
-	<main class="min-h-screen">
-		<!-- Hero Section -->
-		<section id="hero" class="hero min-h-[80vh] bg-gradient-to-br from-[#121620] to-[#1A1E2E] flex items-center justify-center text-center px-4">
-			<div class="hero-content max-w-4xl">
-				<div class="flex flex-col items-center">
-					<h1 class="text-4xl md:text-5xl font-light mb-4 text-[#F7F8F9]" aria-label="OutwardLight Studio">
-						Outward<span class="font-medium text-[#4ECDC4]">Light</span> Studio
-					</h1>
-					<p class="text-xl md:text-2xl mb-8 text-[#D8DEE9] max-w-2xl">
-						Streamlined and personalized product development using open source tools and frameworks
-					</p>
-					<div class="flex gap-4 flex-wrap justify-center">
-						<a href="#portfolio" class="btn btn-primary bg-[#4ECDC4] hover:bg-[#3DBDB4] border-none text-[#121620]">
-							View Our Work
-						</a>
-						<a href="https://github.com/OutwardLightStudio" class="btn btn-outline text-[#F7F8F9] border-[#F7F8F9] hover:bg-[#F7F8F9] hover:text-[#121620]">
-							GitHub
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="hero min-h-[80vh] bg-gradient-to-br from-[#121620] to-[#1A1E2E] flex items-center justify-center text-center px-4"
+    >
+      <div class="hero-content max-w-4xl">
+        <div class="flex flex-col items-center">
+          <h1
+            class="text-4xl md:text-5xl font-light mb-4 text-[#F7F8F9]"
+            aria-label="OutwardLight Studio"
+          >
+            Outward<span class="font-medium text-[#4ECDC4]">Light</span> Studio
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-[#D8DEE9] max-w-2xl">
+            Streamlined and personalized product development using open source
+            tools and frameworks
+          </p>
+          <div class="flex gap-4 flex-wrap justify-center">
+            <a
+              href="#portfolio"
+              class="btn btn-primary bg-[#4ECDC4] hover:bg-[#3DBDB4] border-none text-[#121620]"
+            >
+              View Our Work
+            </a>
+            <a
+              href="https://github.com/OutwardLightStudio"
+              class="btn btn-outline text-[#F7F8F9] border-[#F7F8F9] hover:bg-[#F7F8F9] hover:text-[#121620]"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- About Section -->
-		<section id="about" class="py-16 px-4 bg-[#121620]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">About Our Studio</h2>
-				<div class="bg-[#1E2432] p-6 rounded-lg shadow-lg">
-					<p class="mb-4 text-[#D8DEE9]">
-						We are a team of two developers and a 3D modeller/animator who started as a loose collaboration to build skills and practice making projects. 
-					</p>
-					<p class="mb-4 text-[#D8DEE9]">
-						We value openness, proactive contribution, and shared ownership. We're passionate about contributing to the broader open source and open cultural ecosystems while building fun and elegant products.
-					</p>
-					<div class="flex flex-wrap gap-4 mt-8">
-						<div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">Openness</div>
-						<div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">Proactive Contribution</div>
-						<div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">Shared Ownership</div>
-						<div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">Open Source</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-[#121620]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">
+          About Our Studio
+        </h2>
+        <div class="bg-[#1E2432] p-6 rounded-lg shadow-lg">
+          <p class="mb-4 text-[#D8DEE9]">
+            We are a team of two developers and a 3D modeller/animator who
+            started as a loose collaboration to build skills and practice making
+            projects.
+          </p>
+          <p class="mb-4 text-[#D8DEE9]">
+            We value openness, proactive contribution, and shared ownership.
+            We're passionate about contributing to the broader open source and
+            open cultural ecosystems while building fun and elegant products.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">
+              Openness
+            </div>
+            <div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">
+              Proactive Contribution
+            </div>
+            <div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">
+              Shared Ownership
+            </div>
+            <div class="badge badge-lg bg-[#4ECDC4] text-[#121620]">
+              Open Source
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Services Section -->
-		<section id="services" class="py-16 px-4 bg-[#1A1E2E]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Services</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<!-- Web/App Development Card -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<div class="card-body">
-							<div class="w-16 h-16 mb-4 text-[#4ECDC4]">
-								<!-- We would add an SVG icon here in a real implementation -->
-								<div class="w-16 h-16 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center">
-									<span class="text-2xl text-[#4ECDC4]">🌐</span>
-								</div>
-							</div>
-							<h3 class="card-title text-[#F7F8F9]">Web & App Development</h3>
-							<p class="text-[#D8DEE9]">Full stack, mobile-first solutions using Flutter or Web Platform technologies.</p>
-							<ul class="text-sm text-[#D8DEE9] mt-2 space-y-1">
-								<li>• Quick time-to-market to validate ideas</li>
-								<li>• Cross-platform compatibility by default</li>
-								<li>• Efficient development using single codebase</li>
-							</ul>
-						</div>
-					</div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 bg-[#1A1E2E]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Web/App Development Card -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <div class="card-body">
+              <div class="w-16 h-16 mb-4 text-[#4ECDC4]">
+                <!-- We would add an SVG icon here in a real implementation -->
+                <div
+                  class="w-16 h-16 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center"
+                >
+                  <span class="text-2xl text-[#4ECDC4]">🌐</span>
+                </div>
+              </div>
+              <h3 class="card-title text-[#F7F8F9]">Web & App Development</h3>
+              <p class="text-[#D8DEE9]">
+                Full stack, mobile-first solutions using Flutter or Web Platform
+                technologies.
+              </p>
+              <ul class="text-sm text-[#D8DEE9] mt-2 space-y-1">
+                <li>• Quick time-to-market to validate ideas</li>
+                <li>• Cross-platform compatibility by default</li>
+                <li>• Efficient development using single codebase</li>
+              </ul>
+            </div>
+          </div>
 
-					<!-- Game Development Card -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<div class="card-body">
-							<div class="w-16 h-16 mb-4 text-[#4ECDC4]">
-								<div class="w-16 h-16 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center">
-									<span class="text-2xl text-[#4ECDC4]">🎮</span>
-								</div>
-							</div>
-							<h3 class="card-title text-[#F7F8F9]">Game Development</h3>
-							<p class="text-[#D8DEE9]">2D and 3D games using open source game engines like Godot.</p>
-							<ul class="text-sm text-[#D8DEE9] mt-2 space-y-1">
-								<li>• Engaging gameplay mechanics</li>
-								<li>• Focus on user experience</li>
-								<li>• Open source technology stack</li>
-							</ul>
-						</div>
-					</div>
+          <!-- Game Development Card -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <div class="card-body">
+              <div class="w-16 h-16 mb-4 text-[#4ECDC4]">
+                <div
+                  class="w-16 h-16 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center"
+                >
+                  <span class="text-2xl text-[#4ECDC4]">🎮</span>
+                </div>
+              </div>
+              <h3 class="card-title text-[#F7F8F9]">Game Development</h3>
+              <p class="text-[#D8DEE9]">
+                2D and 3D games using open source game engines like Godot.
+              </p>
+              <ul class="text-sm text-[#D8DEE9] mt-2 space-y-1">
+                <li>• Engaging gameplay mechanics</li>
+                <li>• Focus on user experience</li>
+                <li>• Open source technology stack</li>
+              </ul>
+            </div>
+          </div>
 
-					<!-- Art Development Card -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<div class="card-body">
-							<div class="w-16 h-16 mb-4 text-[#4ECDC4]">
-								<div class="w-16 h-16 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center">
-									<span class="text-2xl text-[#4ECDC4]">🎨</span>
-								</div>
-							</div>
-							<h3 class="card-title text-[#F7F8F9]">Art Development</h3>
-							<p class="text-[#D8DEE9]">2D/3D art, mockups, and visualizations for products and architecture.</p>
-							<ul class="text-sm text-[#D8DEE9] mt-2 space-y-1">
-								<li>• Creative visual storytelling</li>
-								<li>• Technical precision</li>
-								<li>• Adaptable style approaches</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+          <!-- Art Development Card -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <div class="card-body">
+              <div class="w-16 h-16 mb-4 text-[#4ECDC4]">
+                <div
+                  class="w-16 h-16 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center"
+                >
+                  <span class="text-2xl text-[#4ECDC4]">🎨</span>
+                </div>
+              </div>
+              <h3 class="card-title text-[#F7F8F9]">Art Development</h3>
+              <p class="text-[#D8DEE9]">
+                2D/3D art, mockups, and visualizations for products and
+                architecture.
+              </p>
+              <ul class="text-sm text-[#D8DEE9] mt-2 space-y-1">
+                <li>• Creative visual storytelling</li>
+                <li>• Technical precision</li>
+                <li>• Adaptable style approaches</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Process Section -->
-		<section id="process" class="py-16 px-4 bg-[#121620]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Process</h2>
-				<div class="bg-[#1E2432] p-6 rounded-lg shadow-lg">
-					<ol class="relative border-l border-[#4ECDC4]">
-						<li class="mb-10 ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">1</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">Project Brief</h3>
-							<p class="text-[#D8DEE9]">We define goals, outcomes, priorities, and establish what's in and out of scope.</p>
-						</li>
-						<li class="mb-10 ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">2</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">Technical Review</h3>
-							<p class="text-[#D8DEE9]">We assess technical scope, feasibility, and create an estimated roadmap.</p>
-						</li>
-						<li class="mb-10 ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">3</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">UX Design</h3>
-							<p class="text-[#D8DEE9]">We develop content architecture, brand guidelines, gameplay mechanics, and conduct user interviews.</p>
-						</li>
-						<li class="mb-10 ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">4</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">Development</h3>
-							<p class="text-[#D8DEE9]">We use agile methodology with continuous feedback and delivery, able to pivot based on UX/QA reviews.</p>
-						</li>
-						<li class="mb-10 ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">5</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">QA Testing</h3>
-							<p class="text-[#D8DEE9]">Testing and quality control is integrated throughout our development process.</p>
-						</li>
-						<li class="mb-10 ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">6</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">Delivery</h3>
-							<p class="text-[#D8DEE9]">We deploy the technology to web platforms or deliver to app stores.</p>
-						</li>
-						<li class="ml-6">
-							<span class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]">7</span>
-							<h3 class="text-xl font-medium text-[#F7F8F9]">Monitoring & Continuation</h3>
-							<p class="text-[#D8DEE9]">We monitor adoption, gather additional user feedback, and plan for continuing project iterations.</p>
-						</li>
-					</ol>
-				</div>
-			</div>
-		</section>
+    <!-- Process Section -->
+    <section id="process" class="py-16 px-4 bg-[#121620]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Process</h2>
+        <div class="bg-[#1E2432] p-6 rounded-lg shadow-lg">
+          <ol class="relative border-l border-[#4ECDC4]">
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >1</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">Project Brief</h3>
+              <p class="text-[#D8DEE9]">
+                We define goals, outcomes, priorities, and establish what's in
+                and out of scope.
+              </p>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >2</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">
+                Technical Review
+              </h3>
+              <p class="text-[#D8DEE9]">
+                We assess technical scope, feasibility, and create an estimated
+                roadmap.
+              </p>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >3</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">UX Design</h3>
+              <p class="text-[#D8DEE9]">
+                We develop content architecture, brand guidelines, gameplay
+                mechanics, and conduct user interviews.
+              </p>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >4</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">Development</h3>
+              <p class="text-[#D8DEE9]">
+                We use agile methodology with continuous feedback and delivery,
+                able to pivot based on UX/QA reviews.
+              </p>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >5</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">QA Testing</h3>
+              <p class="text-[#D8DEE9]">
+                Testing and quality control is integrated throughout our
+                development process.
+              </p>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >6</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">Delivery</h3>
+              <p class="text-[#D8DEE9]">
+                We deploy the technology to web platforms or deliver to app
+                stores.
+              </p>
+            </li>
+            <li class="ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 bg-[#4ECDC4] text-[#121620]"
+                >7</span
+              >
+              <h3 class="text-xl font-medium text-[#F7F8F9]">
+                Monitoring & Continuation
+              </h3>
+              <p class="text-[#D8DEE9]">
+                We monitor adoption, gather additional user feedback, and plan
+                for continuing project iterations.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-		<!-- Portfolio Section -->
-		<section id="portfolio" class="py-16 px-4 bg-[#1A1E2E]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Work</h2>
-				<div class="card bg-[#1E2432] shadow-lg overflow-hidden">
-					<figure class="relative">
-						<!-- Embedded playable version of Nexus -->
-						<div class="w-full flex justify-center">
-							<iframe frameborder="0" src="https://itch.io/embed-upload/13188827?color=743f39" allowfullscreen="" width="100%" height="596"><a href="https://outwardlight.itch.io/nexus">Play Nexus on itch.io</a></iframe>
-						</div>
-						<div class="absolute top-4 right-4">
-							<span class="badge badge-lg bg-[#FFB84D] text-[#121620]">Play online</span>
-						</div>
-					</figure>
-					<div class="card-body">
-						<h3 class="card-title text-xl text-[#F7F8F9]">Nexus</h3>
-						<p class="text-[#D8DEE9]">
-							Our flagship project soon to be released on web platform and desktop operating systems.
-						</p>
-						<div class="flex flex-wrap gap-2 mt-4">
-							<div class="badge badge-sm bg-[#1A1E2E] text-[#D8DEE9]">Web Platform</div>
-							<div class="badge badge-sm bg-[#1A1E2E] text-[#D8DEE9]">Desktop</div>
-							<div class="badge badge-sm bg-[#1A1E2E] text-[#D8DEE9]">Open Source</div>
-						</div>
-						<div class="card-actions justify-end mt-4">
-							<a href="https://github.com/OutwardLightStudio" class="btn btn-sm btn-outline text-[#4ECDC4] border-[#4ECDC4] hover:bg-[#4ECDC4] hover:text-[#121620]">
-								View on GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 px-4 bg-[#1A1E2E]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Work</h2>
+        <div class="card bg-[#1E2432] shadow-lg overflow-hidden">
+          <figure class="relative">
+            <!-- Embedded playable version of Nexus -->
+            <div class="w-full flex justify-center">
+              <iframe
+                frameborder="0"
+                src="https://itch.io/embed-upload/13188827?color=743f39"
+                allowfullscreen=""
+                width="100%"
+                height="596"
+                ><a href="https://outwardlight.itch.io/nexus">Play Nexus on
+                itch.io</a></iframe
+              >
+            </div>
+            <div class="absolute top-4 right-4">
+              <span class="badge badge-lg bg-[#FFB84D] text-[#121620]"
+                >Play online</span
+              >
+            </div>
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-xl text-[#F7F8F9]">Nexus</h3>
+            <p class="text-[#D8DEE9]">
+              Our flagship project soon to be released on web platform and
+              desktop operating systems.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <div class="badge badge-sm bg-[#1A1E2E] text-[#D8DEE9]">
+                Web Platform
+              </div>
+              <div class="badge badge-sm bg-[#1A1E2E] text-[#D8DEE9]">
+                Desktop
+              </div>
+              <div class="badge badge-sm bg-[#1A1E2E] text-[#D8DEE9]">
+                Open Source
+              </div>
+            </div>
+            <div class="card-actions justify-end mt-4">
+              <a
+                href="https://github.com/OutwardLightStudio"
+                class="btn btn-sm btn-outline text-[#4ECDC4] border-[#4ECDC4] hover:bg-[#4ECDC4] hover:text-[#121620]"
+              >
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Team Section -->
-		<section id="team" class="py-16 px-4 bg-[#121620]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Meet Our Team</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<!-- Team Member: Brylie -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<figure class="px-6 pt-6">
-							<!-- Placeholder for profile image -->
-							<div class="w-32 h-32 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center">
-								<span class="text-4xl text-[#4ECDC4]">B</span>
-							</div>
-						</figure>
-						<div class="card-body">
-							<h3 class="card-title text-[#F7F8F9]">Brylie</h3>
-							<p class="text-sm text-[#4ECDC4]">Open Source Developer & Project Lead</p>
-							<p class="text-[#D8DEE9]">15 years' industry experience in open source development and project management.</p>
-							<div class="card-actions justify-end mt-4">
-								<a href="#" class="btn btn-xs btn-ghost text-[#D8DEE9]">GitHub</a>
-							</div>
-						</div>
-					</div>
+    <!-- Team Section -->
+    <section id="team" class="py-16 px-4 bg-[#121620]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Team Member: Brylie -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <figure class="px-6 pt-6">
+              <!-- Placeholder for profile image -->
+              <div
+                class="w-32 h-32 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center"
+              >
+                <span class="text-4xl text-[#4ECDC4]">B</span>
+              </div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-[#F7F8F9]">Brylie</h3>
+              <p class="text-sm text-[#4ECDC4]">
+                Open Source Developer & Project Lead
+              </p>
+              <p class="text-[#D8DEE9]">
+                15 years' industry experience in open source development and
+                project management.
+              </p>
+              <div class="card-actions justify-end mt-4">
+                <a href="#" class="btn btn-xs btn-ghost text-[#D8DEE9]"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
 
-					<!-- Team Member: Eduard -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<figure class="px-6 pt-6">
-							<!-- Placeholder for profile image -->
-							<div class="w-32 h-32 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center">
-								<span class="text-4xl text-[#4ECDC4]">E</span>
-							</div>
-						</figure>
-						<div class="card-body">
-							<h3 class="card-title text-[#F7F8F9]">Eduard</h3>
-							<p class="text-sm text-[#4ECDC4]">3D Modeller & Animator</p>
-							<p class="text-[#D8DEE9]">In-house artist with a unique background in finance, bringing analytical precision to creative work.</p>
-							<div class="card-actions justify-end mt-4">
-								<a href="#" class="btn btn-xs btn-ghost text-[#D8DEE9]">Portfolio</a>
-							</div>
-						</div>
-					</div>
+          <!-- Team Member: Eduard -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <figure class="px-6 pt-6">
+              <!-- Placeholder for profile image -->
+              <div
+                class="w-32 h-32 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center"
+              >
+                <span class="text-4xl text-[#4ECDC4]">E</span>
+              </div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-[#F7F8F9]">Eduard</h3>
+              <p class="text-sm text-[#4ECDC4]">3D Modeller & Animator</p>
+              <p class="text-[#D8DEE9]">
+                In-house artist with a unique background in finance, bringing
+                analytical precision to creative work.
+              </p>
+              <div class="card-actions justify-end mt-4">
+                <a href="#" class="btn btn-xs btn-ghost text-[#D8DEE9]"
+                  >Portfolio</a
+                >
+              </div>
+            </div>
+          </div>
 
-					<!-- Team Member: Victor -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<figure class="px-6 pt-6">
-							<!-- Placeholder for profile image -->
-							<div class="w-32 h-32 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center">
-								<span class="text-4xl text-[#4ECDC4]">V</span>
-							</div>
-						</figure>
-						<div class="card-body">
-							<h3 class="card-title text-[#F7F8F9]">Victor</h3>
-							<p class="text-sm text-[#4ECDC4]">Web & Game Developer</p>
-							<p class="text-[#D8DEE9]">Experienced in multiple game projects with a passion for creating engaging interactive experiences.</p>
-							<div class="card-actions justify-end mt-4">
-								<a href="#" class="btn btn-xs btn-ghost text-[#D8DEE9]">GitHub</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+          <!-- Team Member: Victor -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <figure class="px-6 pt-6">
+              <!-- Placeholder for profile image -->
+              <div
+                class="w-32 h-32 rounded-full bg-[#4ECDC4]/20 flex items-center justify-center"
+              >
+                <span class="text-4xl text-[#4ECDC4]">V</span>
+              </div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-[#F7F8F9]">Victor</h3>
+              <p class="text-sm text-[#4ECDC4]">Web & Game Developer</p>
+              <p class="text-[#D8DEE9]">
+                Experienced in multiple game projects with a passion for
+                creating engaging interactive experiences.
+              </p>
+              <div class="card-actions justify-end mt-4">
+                <a href="#" class="btn btn-xs btn-ghost text-[#D8DEE9]"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Open Source Section (alternative to testimonials) -->
-		<section id="open-source" class="py-16 px-4 bg-[#1A1E2E]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Open Source Commitment</h2>
-				<div class="bg-[#1E2432] p-6 rounded-lg shadow-lg">
-					<p class="mb-4 text-[#D8DEE9]">
-						We believe in the power of open source to foster innovation, collaboration, and accessibility. Our commitment to open source extends beyond using free tools – we actively contribute to the ecosystem and build our solutions with openness in mind.
-					</p>
-					<p class="mb-4 text-[#D8DEE9]">
-						When you work with us, you benefit from transparent development practices, community-tested technologies, and solutions that can grow and adapt with your needs.
-					</p>
-					<div class="flex justify-center mt-8">
-						<a href="https://github.com/OutwardLightStudio" class="btn btn-outline text-[#4ECDC4] border-[#4ECDC4] hover:bg-[#4ECDC4] hover:text-[#121620]">
-							View Our GitHub
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+    <!-- Open Source Section (alternative to testimonials) -->
+    <section id="open-source" class="py-16 px-4 bg-[#1A1E2E]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">
+          Our Open Source Commitment
+        </h2>
+        <div class="bg-[#1E2432] p-6 rounded-lg shadow-lg">
+          <p class="mb-4 text-[#D8DEE9]">
+            We believe in the power of open source to foster innovation,
+            collaboration, and accessibility. Our commitment to open source
+            extends beyond using free tools – we actively contribute to the
+            ecosystem and build our solutions with openness in mind.
+          </p>
+          <p class="mb-4 text-[#D8DEE9]">
+            When you work with us, you benefit from transparent development
+            practices, community-tested technologies, and solutions that can
+            grow and adapt with your needs.
+          </p>
+          <div class="flex justify-center mt-8">
+            <a
+              href="https://github.com/OutwardLightStudio"
+              class="btn btn-outline text-[#4ECDC4] border-[#4ECDC4] hover:bg-[#4ECDC4] hover:text-[#121620]"
+            >
+              View Our GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Tech Stack Section -->
-		<section id="tech-stack" class="py-16 px-4 bg-[#121620]">
-			<div class="container mx-auto max-w-4xl">
-				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Our Technology Stack</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<!-- Web Technologies -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<div class="card-body">
-							<h3 class="card-title text-[#F7F8F9]">Web Development</h3>
-							<ul class="text-[#D8DEE9] space-y-2 mt-4">
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									HTML5 & CSS3
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									JavaScript/TypeScript
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									React & Astro
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Tailwind CSS
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Flutter
-								</li>
-							</ul>
-						</div>
-					</div>
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="py-16 px-4 bg-[#121620]">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">
+          Our Technology Stack
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Web Technologies -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-[#F7F8F9]">Web Development</h3>
+              <ul class="text-[#D8DEE9] space-y-2 mt-4">
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  HTML5 & CSS3
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  JavaScript/TypeScript
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  React & Astro
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Tailwind CSS
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Flutter
+                </li>
+              </ul>
+            </div>
+          </div>
 
-					<!-- Game Development -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<div class="card-body">
-							<h3 class="card-title text-[#F7F8F9]">Game Development</h3>
-							<ul class="text-[#D8DEE9] space-y-2 mt-4">
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Godot Engine
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									GDScript
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									C#
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									WebGL
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Three.js
-								</li>
-							</ul>
-						</div>
-					</div>
+          <!-- Game Development -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-[#F7F8F9]">Game Development</h3>
+              <ul class="text-[#D8DEE9] space-y-2 mt-4">
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Godot Engine
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  GDScript
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  C#
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  WebGL
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Three.js
+                </li>
+              </ul>
+            </div>
+          </div>
 
-					<!-- Art & Design -->
-					<div class="card bg-[#1E2432] shadow-lg">
-						<div class="card-body">
-							<h3 class="card-title text-[#F7F8F9]">Art & Design</h3>
-							<ul class="text-[#D8DEE9] space-y-2 mt-4">
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Blender
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									GIMP
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Inkscape
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Krita
-								</li>
-								<li class="flex items-center">
-									<span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
-									Figma
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+          <!-- Art & Design -->
+          <div class="card bg-[#1E2432] shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-[#F7F8F9]">Art & Design</h3>
+              <ul class="text-[#D8DEE9] space-y-2 mt-4">
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Blender
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  GIMP
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Inkscape
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Krita
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-[#4ECDC4] rounded-full mr-2"></span>
+                  Figma
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Contact Section -->
+    <!-- Contact Section -->
+    <!--
 		<section id="contact" class="py-16 px-4 bg-[#1A1E2E]">
 			<div class="container mx-auto max-w-4xl">
 				<h2 class="text-3xl font-light mb-8 text-[#F7F8F9]">Get In Touch</h2>
@@ -416,27 +559,32 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 		</section>
-	</main>
+		-->
+  </main>
 
-	<!-- Footer -->
-	<footer class="bg-[#121620] text-[#D8DEE9] py-8 px-4">
-		<div class="container mx-auto max-w-4xl">
-			<div class="flex flex-col md:flex-row justify-between items-center">
-				<div class="mb-4 md:mb-0">
-					<h2 class="text-xl font-light text-[#F7F8F9]">OutwardLight Studio</h2>
-					<p class="text-sm">Illuminating Open Creation</p>
-				</div>
-				<div class="flex space-x-4">
-					<a href="https://github.com/OutwardLightStudio" class="text-[#D8DEE9] hover:text-[#4ECDC4]" aria-label="GitHub">
-						<!-- GitHub icon would go here -->
-						GitHub
-					</a>
-				</div>
-			</div>
-			<div class="mt-8 pt-4 border-t border-[#1E2432] text-sm text-center">
-				<p>&copy; 2025 OutwardLight Studio. All rights reserved.</p>
-				<p class="mt-2">Built with open source technologies.</p>
-			</div>
-		</div>
-	</footer>
+  <!-- Footer -->
+  <footer class="bg-[#121620] text-[#D8DEE9] py-8 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-xl font-light text-[#F7F8F9]">OutwardLight Studio</h2>
+          <p class="text-sm">Illuminating Open Creation</p>
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="https://github.com/OutwardLightStudio"
+            class="text-[#D8DEE9] hover:text-[#4ECDC4]"
+            aria-label="GitHub"
+          >
+            <!-- GitHub icon would go here -->
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="mt-8 pt-4 border-t border-[#1E2432] text-sm text-center">
+        <p>&copy; 2025 OutwardLight Studio. All rights reserved.</p>
+        <p class="mt-2">Built with open source technologies.</p>
+      </div>
+    </div>
+  </footer>
 </Layout>
