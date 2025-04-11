@@ -1,17 +1,27 @@
 ---
 import "../styles/global.css";
-
 import { ViewTransitions } from "astro:transitions";
+import OwlImage from "../assets/Owl-medium.jpg";
 
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string | ImageMetadata;
+  canonicalURL?: URL | string;
 }
 
 const {
   title = "OutwardLight Studio | Open Source Development",
   description = "Streamlined and personalized product development using open source tools and frameworks",
+  ogImage = OwlImage,
+  canonicalURL = Astro.url,
 } = Astro.props;
+
+// Get the full URL for og:image regardless of whether it's a relative or absolute path
+const ogImageURL =
+  typeof ogImage === "string"
+    ? new URL(ogImage, Astro.site || Astro.url).href
+    : new URL(ogImage.src, Astro.site || Astro.url).href;
 ---
 
 <!doctype html>
@@ -20,26 +30,52 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="author" content="OutwardLight Studio" />
+    <meta
+      name="keywords"
+      content="open source, development, studio, game development, web development, 3D modeling, OutwardLight"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="OutwardLight Studio" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="OutwardLight Studio - Open Source Development"
+    />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta
+      name="twitter:image:alt"
+      content="OutwardLight Studio - Open Source Development"
+    />
+
+    <!-- WhatsApp / iMessage Preview -->
+    <meta property="og:image:secure_url" content={ogImageURL} />
+
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -226,22 +262,26 @@ const {
             </li>
             <li>
               <a href="#services" class="hover:text-[#4ECDC4] transition"
-                >Services</a>
+                >Services</a
+              >
             </li>
             <li>
               <a href="#process" class="hover:text-[#4ECDC4] transition"
-                >Process</a>
+                >Process</a
+              >
             </li>
             <li>
               <a href="#portfolio" class="hover:text-[#4ECDC4] transition"
-                >Work</a>
+                >Work</a
+              >
             </li>
             <li>
               <a href="#team" class="hover:text-[#4ECDC4] transition">Team</a>
             </li>
             <li>
               <a href="#contact" class="hover:text-[#4ECDC4] transition"
-                >Contact</a>
+                >Contact</a
+              >
             </li>
           </ul>
 
@@ -261,32 +301,39 @@ const {
           <ul class="flex flex-col space-y-4 text-[#D8DEE9]">
             <li>
               <a href="#about" class="block hover:text-[#4ECDC4] transition"
-                >About</a>
+                >About</a
+              >
             </li>
             <li>
               <a href="#services" class="block hover:text-[#4ECDC4] transition"
-                >Services</a>
+                >Services</a
+              >
             </li>
             <li>
               <a href="#process" class="block hover:text-[#4ECDC4] transition"
-                >Process</a>
+                >Process</a
+              >
             </li>
             <li>
               <a href="#portfolio" class="block hover:text-[#4ECDC4] transition"
-                >Work</a>
+                >Work</a
+              >
             </li>
             <li>
               <a href="#team" class="block hover:text-[#4ECDC4] transition"
-                >Team</a>
+                >Team</a
+              >
             </li>
             <li>
               <a href="#contact" class="block hover:text-[#4ECDC4] transition"
-                >Contact</a>
+                >Contact</a
+              >
             </li>
             <li>
               <a
                 href="https://github.com/OutwardLightStudio"
-                class="block hover:text-[#4ECDC4] transition">GitHub</a>
+                class="block hover:text-[#4ECDC4] transition">GitHub</a
+              >
             </li>
           </ul>
         </div>
