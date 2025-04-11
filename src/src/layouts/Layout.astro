@@ -1,39 +1,39 @@
 ---
-import './src/styles/global.css';
+import "../styles/global.css";
 
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { 
+const {
   title = "OutwardLight Studio | Open Source Development",
-  description = "Streamlined and personalized product development using open source tools and frameworks"
+  description = "Streamlined and personalized product development using open source tools and frameworks",
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="/og-image.png" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
@@ -44,59 +44,93 @@ const {
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Theme color for browser -->
     <meta name="theme-color" content="#121620" />
-    
+
     <!-- View Transitions for SPA-like navigation -->
     <ViewTransitions />
-    
+
     <!-- Optional: Skip to main content link for keyboard users -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const skipLink = document.getElementById('skip-to-content');
+      document.addEventListener("DOMContentLoaded", function () {
+        const skipLink = document.getElementById("skip-to-content");
         if (skipLink) {
-          skipLink.addEventListener('click', function(e) {
+          skipLink.addEventListener("click", function (e) {
             e.preventDefault();
-            const mainContent = document.querySelector('main');
+            const mainContent = document.querySelector("main");
             if (mainContent) {
-              mainContent.setAttribute('tabindex', '-1');
+              mainContent.setAttribute("tabindex", "-1");
               mainContent.focus();
             }
           });
         }
       });
     </script>
-    
+
     <style is:global>
       /* Apply custom font family to elements */
       :root {
         /* Color variables */
         --color-background: #121620;
-        --color-content-bg: #1E2432;
-        --color-primary: #4ECDC4;
-        --color-secondary: #FFB84D;
-        --color-text-primary: #F7F8F9;
-        --color-text-secondary: #D8DEE9;
-        --color-success: #4EAF51;
-        --color-alert: #FF9F1C;
-        --color-error: #FF5A5F;
+        --color-content-bg: #1e2432;
+        --color-primary: #4ecdc4;
+        --color-secondary: #ffb84d;
+        --color-text-primary: #f7f8f9;
+        --color-text-secondary: #d8dee9;
+        --color-success: #4eaf51;
+        --color-alert: #ff9f1c;
+        --color-error: #ff5a5f;
       }
 
       /* Base styles */
       html {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
         background-color: var(--color-background);
         color: var(--color-text-primary);
       }
 
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family:
+          "Outfit",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
       }
 
       /* Focus styles for accessibility */
-      a:focus, button:focus, input:focus, select:focus, textarea:focus {
+      a:focus,
+      button:focus,
+      input:focus,
+      select:focus,
+      textarea:focus {
         outline: 2px solid var(--color-primary);
         outline-offset: 2px;
       }
@@ -130,8 +164,10 @@ const {
         html {
           scroll-behavior: auto;
         }
-        
-        *, *::before, *::after {
+
+        *,
+        *::before,
+        *::after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
@@ -142,101 +178,172 @@ const {
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- Skip to content for accessibility -->
-    <a id="skip-to-content" href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-2 focus:bg-[#4ECDC4] focus:text-[#121620]">
+    <a
+      id="skip-to-content"
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-2 focus:bg-[#4ECDC4] focus:text-[#121620]"
+    >
       Skip to content
     </a>
-    
+
     <!-- Navigation -->
     <header class="bg-[#121620]/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="container mx-auto px-4 py-4">
         <nav class="flex justify-between items-center">
-          <a href="/" class="text-xl font-light text-[#F7F8F9]" aria-label="OutwardLight Studio Home">
+          <a
+            href="/"
+            class="text-xl font-light text-[#F7F8F9]"
+            aria-label="OutwardLight Studio Home"
+          >
             Outward<span class="font-medium text-[#4ECDC4]">Light</span>
           </a>
-          
+
           <!-- Mobile menu button -->
-          <button id="mobile-menu-button" aria-label="Toggle menu" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-[#F7F8F9]">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <button
+            id="mobile-menu-button"
+            aria-label="Toggle menu"
+            class="md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-6 h-6 text-[#F7F8F9]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
-          
+
           <!-- Desktop menu -->
           <ul class="hidden md:flex space-x-6 text-[#D8DEE9]">
-            <li><a href="#about" class="hover:text-[#4ECDC4] transition">About</a></li>
-            <li><a href="#services" class="hover:text-[#4ECDC4] transition">Services</a></li>
-            <li><a href="#process" class="hover:text-[#4ECDC4] transition">Process</a></li>
-            <li><a href="#portfolio" class="hover:text-[#4ECDC4] transition">Work</a></li>
-            <li><a href="#team" class="hover:text-[#4ECDC4] transition">Team</a></li>
-            <li><a href="#contact" class="hover:text-[#4ECDC4] transition">Contact</a></li>
+            <li>
+              <a href="#about" class="hover:text-[#4ECDC4] transition">About</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#4ECDC4] transition"
+                >Services</a>
+            </li>
+            <li>
+              <a href="#process" class="hover:text-[#4ECDC4] transition"
+                >Process</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="hover:text-[#4ECDC4] transition"
+                >Work</a>
+            </li>
+            <li>
+              <a href="#team" class="hover:text-[#4ECDC4] transition">Team</a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-[#4ECDC4] transition"
+                >Contact</a>
+            </li>
           </ul>
-          
+
           <!-- GitHub link -->
-          <a href="https://github.com/OutwardLightStudio" class="hidden md:flex items-center text-[#F7F8F9] hover:text-[#4ECDC4] transition" aria-label="GitHub">
+          <a
+            href="https://github.com/OutwardLightStudio"
+            class="hidden md:flex items-center text-[#F7F8F9] hover:text-[#4ECDC4] transition"
+            aria-label="GitHub"
+          >
             <!-- GitHub icon would go here -->
             <span>GitHub</span>
           </a>
         </nav>
-        
+
         <!-- Mobile menu (hidden by default) -->
         <div id="mobile-menu" class="hidden mt-4 pb-4 md:hidden">
           <ul class="flex flex-col space-y-4 text-[#D8DEE9]">
-            <li><a href="#about" class="block hover:text-[#4ECDC4] transition">About</a></li>
-            <li><a href="#services" class="block hover:text-[#4ECDC4] transition">Services</a></li>
-            <li><a href="#process" class="block hover:text-[#4ECDC4] transition">Process</a></li>
-            <li><a href="#portfolio" class="block hover:text-[#4ECDC4] transition">Work</a></li>
-            <li><a href="#team" class="block hover:text-[#4ECDC4] transition">Team</a></li>
-            <li><a href="#contact" class="block hover:text-[#4ECDC4] transition">Contact</a></li>
-            <li><a href="https://github.com/OutwardLightStudio" class="block hover:text-[#4ECDC4] transition">GitHub</a></li>
+            <li>
+              <a href="#about" class="block hover:text-[#4ECDC4] transition"
+                >About</a>
+            </li>
+            <li>
+              <a href="#services" class="block hover:text-[#4ECDC4] transition"
+                >Services</a>
+            </li>
+            <li>
+              <a href="#process" class="block hover:text-[#4ECDC4] transition"
+                >Process</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="block hover:text-[#4ECDC4] transition"
+                >Work</a>
+            </li>
+            <li>
+              <a href="#team" class="block hover:text-[#4ECDC4] transition"
+                >Team</a>
+            </li>
+            <li>
+              <a href="#contact" class="block hover:text-[#4ECDC4] transition"
+                >Contact</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/OutwardLightStudio"
+                class="block hover:text-[#4ECDC4] transition">GitHub</a>
+            </li>
           </ul>
         </div>
       </div>
     </header>
-    
+
     <!-- Main content -->
     <main id="main-content" class="flex-grow">
       <slot />
     </main>
-    
+
     <!-- Mobile menu toggle script -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
         if (menuButton && mobileMenu) {
           // Toggle menu
-          menuButton.addEventListener('click', function(e) {
+          menuButton.addEventListener("click", function (e) {
             e.stopPropagation(); // Prevent click from immediately bubbling to document
-            mobileMenu.classList.toggle('hidden');
-            menuButton.setAttribute('aria-expanded', 
-              menuButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            mobileMenu.classList.toggle("hidden");
+            menuButton.setAttribute(
+              "aria-expanded",
+              menuButton.getAttribute("aria-expanded") === "true"
+                ? "false"
+                : "true"
             );
           });
 
           // Close menu when clicking outside
-          document.addEventListener('click', function(e) {
+          document.addEventListener("click", function (e) {
             const target = e.target as Node;
-            if (!mobileMenu.contains(target) && !menuButton.contains(target) && !mobileMenu.classList.contains('hidden')) {
-              mobileMenu.classList.add('hidden');
-              menuButton.setAttribute('aria-expanded', 'false');
+            if (
+              !mobileMenu.contains(target) &&
+              !menuButton.contains(target) &&
+              !mobileMenu.classList.contains("hidden")
+            ) {
+              mobileMenu.classList.add("hidden");
+              menuButton.setAttribute("aria-expanded", "false");
             }
           });
 
           // Prevent clicks inside menu from closing it
-          mobileMenu.addEventListener('click', function(e) {
+          mobileMenu.addEventListener("click", function (e) {
             e.stopPropagation();
           });
         }
-        
+
         // Close menu when clicking menu items
         if (mobileMenu) {
-          const menuItems = mobileMenu.querySelectorAll('a');
-          menuItems.forEach(item => {
-            item.addEventListener('click', function() {
-              mobileMenu.classList.add('hidden');
+          const menuItems = mobileMenu.querySelectorAll("a");
+          menuItems.forEach((item) => {
+            item.addEventListener("click", function () {
+              mobileMenu.classList.add("hidden");
               if (menuButton) {
-                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.setAttribute("aria-expanded", "false");
               }
             });
           });
