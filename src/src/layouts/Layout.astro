@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-import { ViewTransitions } from "astro:transitions";
-import OwlImage from "../assets/Owl.jpg";
+import { ClientRouter } from "astro:transitions";
+import OwlImage from "../assets/Owl-medium.jpg";
 
 interface Props {
   title?: string;
@@ -86,7 +86,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
     <meta name="theme-color" content="#121620" />
 
     <!-- View Transitions for SPA-like navigation -->
-    <ViewTransitions />
+    <ClientRouter />
 
     <!-- Optional: Skip to main content link for keyboard users -->
     <script>
