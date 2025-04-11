@@ -2,11 +2,13 @@
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 import OwlImage from "../assets/Owl-medium.jpg";
+import { getImage } from "astro:assets";
+import SocialImage from "../components/SocialImage.astro";
 
 interface Props {
   title?: string;
   description?: string;
-  ogImage?: string | ImageMetadata;
+  ogImage?: ImageMetadata;
   canonicalURL?: URL | string;
 }
 
@@ -17,11 +19,19 @@ const {
   canonicalURL = Astro.url,
 } = Astro.props;
 
-// Get the full URL for og:image regardless of whether it's a relative or absolute path
-const ogImageURL =
-  typeof ogImage === "string"
-    ? new URL(ogImage, Astro.site || Astro.url).href
-    : new URL(ogImage.src, Astro.site || Astro.url).href;
+// Generate the social image
+const socialImage = await getImage({
+  src: SocialImage,
+  width: 1200,
+  height: 630,
+  props: {
+    image: ogImage,
+    alt: "OutwardLight Studio - Open Source Development",
+  },
+});
+
+// Use the generated social image URL
+const ogImageURL = socialImage.src;
 ---
 
 <!doctype html>
