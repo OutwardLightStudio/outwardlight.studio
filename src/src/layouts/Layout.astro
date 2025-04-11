@@ -2,8 +2,6 @@
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 import OwlImage from "../assets/Owl-medium.jpg";
-import { getImage } from "astro:assets";
-import SocialImage from "../components/SocialImage.astro";
 
 interface Props {
   title?: string;
@@ -19,19 +17,8 @@ const {
   canonicalURL = Astro.url,
 } = Astro.props;
 
-// Generate the social image
-const socialImage = await getImage({
-  src: SocialImage,
-  width: 1200,
-  height: 630,
-  props: {
-    image: ogImage,
-    alt: "OutwardLight Studio - Open Source Development",
-  },
-});
-
-// Use the generated social image URL
-const ogImageURL = socialImage.src;
+// Get the full URL for the og:image
+const ogImageURL = new URL(ogImage.src, Astro.site).href;
 ---
 
 <!doctype html>
